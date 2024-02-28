@@ -1,4 +1,3 @@
-// Define a dictionary to store city names and their temperatures
 // Dictionary or list of 10 specific cities and their random temperatures
 const cityTemperatures = {
     "Nagpur": Math.floor(Math.random() * 20) + 20,  // Random temperature between 20 and 40
@@ -34,11 +33,17 @@ function displayWeather(city, temperature) {
             <div class="temp">${temperature}°C</div>
         </div>
     `;
+    weatherBody.style.display = "block"; // Show the weather information
 }
 
 // Event listener for search button
 document.getElementById('search-button').addEventListener('click', () => {
-    let city = document.getElementById('input-box').value;
-    getWeatherReport(city);
+    let city = document.getElementById('input-box').value.trim();
+    if (city !== "") {
+        getWeatherReport(city);
+    } else {
+        alert("Please enter a city name.");
+    }
 });
+
 
