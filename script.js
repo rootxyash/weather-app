@@ -1,4 +1,4 @@
-// Dictionary or list of 10 specific cities and their random temperatures
+
 const cityTemperatures = {
     "Nagpur": Math.floor(Math.random() * 20) + 20,  // Random temperature between 20 and 40
     "Mumbai": Math.floor(Math.random() * 20) + 20,
@@ -12,7 +12,7 @@ const cityTemperatures = {
     "Ahmedabad": Math.floor(Math.random() * 20) + 20
 };
 
-// Function to get weather report for a city
+
 function getWeatherReport(city) {
     let temperature = cityTemperatures[city];
     if (temperature !== undefined) {
@@ -22,7 +22,7 @@ function getWeatherReport(city) {
     }
 }
 
-// Function to display weather information
+
 function displayWeather(city, temperature) {
     let weatherBody = document.getElementById('weather-body');
     weatherBody.innerHTML = `
@@ -33,10 +33,9 @@ function displayWeather(city, temperature) {
             <div class="temp">${temperature}°C</div>
         </div>
     `;
-    weatherBody.style.display = "block"; // Show the weather information
+    weatherBody.style.display = "block"; // 
 }
 
-// Event listener for search button
 document.getElementById('search-button').addEventListener('click', () => {
     let city = document.getElementById('input-box').value.trim();
     if (city !== "") {
