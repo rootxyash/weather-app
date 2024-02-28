@@ -1,6 +1,6 @@
 
 const cityTemperatures = {
-    "Nagpur": Math.floor(Math.random() * 20) + 20,  // Random temperature between 20 and 40
+    "Nagpur": Math.floor(Math.random() * 20) + 20,  
     "Mumbai": Math.floor(Math.random() * 20) + 20,
     "Delhi": Math.floor(Math.random() * 20) + 20,
     "Bangalore": Math.floor(Math.random() * 20) + 20,
